@@ -24,7 +24,7 @@ function getAllItemsPaginated(pageNumber) {
   const itemsPerPage = 6;
   const offset = itemsPerPage * (pageNumber - 1);
   knexInstance
-    .select('name', 'price', 'checked', 'category')
+    .select('*')
     .from('shopping_list')
     .limit(itemsPerPage)
     .offset(offset)
